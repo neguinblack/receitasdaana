@@ -1,0 +1,1400 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Arte de Fazer Bolos — Ebook Completo de Confeitaria | Receitas Profissionais</title>
+<meta name="description" content="Aprenda a fazer bolos que encantam e geram renda. 40+ receitas completas, técnicas profissionais e guia de negócio. Ebook completo por apenas R$22,50.">
+<meta name="keywords" content="ebook bolos, receitas de bolos, confeitaria, fazer bolos, bolo de encomenda, confeitaria profissional, receita bolo, curso confeitaria">
+<meta name="author" content="Chef Ana Paula">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="A Arte de Fazer Bolos — Ebook Completo">
+<meta property="og:description" content="Aprenda a fazer bolos que encantam e geram renda. 40+ receitas completas por apenas R$22,50.">
+<meta property="og:image" content="https://bolosanapaula.github.io/ebook-bolos-preview.jpg">
+<meta property="og:url" content="https://bolosanapaula.github.io">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="A Arte de Fazer Bolos — Ebook Completo">
+<meta name="twitter:description" content="Aprenda a fazer bolos que encantam e geram renda. 40+ receitas completas por apenas R$22,50.">
+<link rel="canonical" href="https://bolosanapaula.github.io">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ══════════════════════════════════════
+   TOKENS
+══════════════════════════════════════ */
+:root{
+  --rose:       #7C2D3E;
+  --rose-mid:   #B85468;
+  --rose-light: #F2C4CE;
+  --rose-pale:  #FEF4F6;
+  --cream:      #FDF8F4;
+  --warm:       #FFFBF8;
+  --gold:       #C9963A;
+  --gold-lt:    #F0D9A8;
+  --gold-pale:  #FFFBEF;
+  --text:       #2A1520;
+  --muted:      #8A6070;
+  --border:     #EDD8DC;
+  --dark:       #1A0A10;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+
+body{
+  font-family:'Outfit',sans-serif;
+  background:var(--cream);
+  color:var(--text);
+  overflow-x:hidden;
+}
+
+/* ══ UTILS ══ */
+.serif{font-family:'Cormorant Garamond',serif;}
+.container{max-width:1060px;margin:0 auto;padding:0 24px;}
+.gold{color:var(--gold);}
+.rose{color:var(--rose);}
+
+/* ══════════════════════════════════════
+   BARRA DE URGÊNCIA
+══════════════════════════════════════ */
+.urgency-bar{
+  background:var(--rose);
+  color:#fff;
+  text-align:center;
+  padding:10px 20px;
+  font-size:13.5px;
+  font-weight:500;
+  letter-spacing:.3px;
+  position:sticky;top:0;z-index:999;
+}
+.urgency-bar strong{color:var(--gold-lt);}
+#countdown{
+  display:inline-flex;align-items:center;gap:6px;
+  background:rgba(0,0,0,.2);
+  border-radius:20px;
+  padding:2px 12px;
+  font-size:13px;font-weight:700;
+  margin-left:8px;
+}
+
+/* ══════════════════════════════════════
+   NAVBAR
+══════════════════════════════════════ */
+nav{
+  background:rgba(253,248,244,.95);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--border);
+  padding:14px 24px;
+  display:flex;align-items:center;justify-content:space-between;
+  position:sticky;top:41px;z-index:998;
+}
+.nav-logo{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.3rem;font-weight:700;
+  color:var(--rose);
+  display:flex;align-items:center;gap:8px;
+}
+.nav-cta{
+  background:var(--rose);
+  color:#fff;
+  padding:9px 22px;
+  border-radius:30px;
+  text-decoration:none;
+  font-size:13px;font-weight:600;
+  transition:all .2s;
+  display:none;
+}
+.nav-cta:hover{background:#5A1828;transform:translateY(-1px);}
+
+/* ══════════════════════════════════════
+   HERO
+══════════════════════════════════════ */
+.hero{
+  background:var(--dark);
+  min-height:100vh;
+  display:flex;align-items:center;
+  position:relative;overflow:hidden;
+  padding:80px 0 60px;
+}
+.hero-mesh{
+  position:absolute;inset:0;
+  background:
+    radial-gradient(ellipse at 80% 30%, #8B2040 0%, transparent 50%),
+    radial-gradient(ellipse at 15% 70%, #4A1020 0%, transparent 45%),
+    radial-gradient(ellipse at 50% 100%, #3A0E18 0%, transparent 55%);
+}
+/* grain overlay */
+.hero-grain{
+  position:absolute;inset:0;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+  opacity:.4;pointer-events:none;
+}
+.hero-orb{
+  position:absolute;
+  border-radius:50%;
+  filter:blur(80px);
+  pointer-events:none;
+}
+.hero-orb-1{width:500px;height:500px;background:rgba(124,45,62,.35);top:-100px;right:-100px;}
+.hero-orb-2{width:300px;height:300px;background:rgba(201,150,58,.12);bottom:50px;left:-50px;}
+
+.hero-inner{
+  position:relative;z-index:1;
+  display:grid;
+  grid-template-columns:1fr 420px;
+  gap:60px;align-items:center;
+}
+.hero-eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  border:1px solid rgba(201,150,58,.4);
+  color:var(--gold-lt);
+  font-size:11px;font-weight:500;
+  letter-spacing:2.5px;text-transform:uppercase;
+  padding:5px 16px;border-radius:30px;
+  margin-bottom:24px;
+  background:rgba(201,150,58,.06);
+  backdrop-filter:blur(4px);
+  animation:fadeUp .8s ease both;
+}
+.hero h1{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(2.6rem,5.5vw,4.2rem);
+  font-weight:700;
+  color:#fff;
+  line-height:1.08;
+  margin-bottom:20px;
+  animation:fadeUp .8s .15s ease both;
+}
+.hero h1 em{color:var(--rose-light);font-style:italic;}
+.hero h1 span{color:var(--gold-lt);}
+.hero-sub{
+  color:rgba(255,255,255,.6);
+  font-size:16.5px;
+  line-height:1.75;
+  font-weight:300;
+  max-width:480px;
+  margin-bottom:36px;
+  animation:fadeUp .8s .3s ease both;
+}
+.hero-proof{
+  display:flex;gap:28px;flex-wrap:wrap;
+  margin-bottom:40px;
+  animation:fadeUp .8s .45s ease both;
+}
+.hp-item{display:flex;align-items:center;gap:8px;}
+.hp-icon{font-size:1.2rem;}
+.hp-text{font-size:13px;color:rgba(255,255,255,.55);}
+.hp-text strong{color:#fff;display:block;font-size:15px;}
+
+.btn-hero{
+  display:inline-flex;align-items:center;gap:10px;
+  background:linear-gradient(135deg,var(--gold),#A87520);
+  color:var(--dark);
+  padding:18px 36px;
+  border-radius:14px;
+  text-decoration:none;
+  font-size:16px;font-weight:700;
+  letter-spacing:.3px;
+  transition:all .25s;
+  box-shadow:0 8px 32px rgba(201,150,58,.35);
+  animation:fadeUp .8s .55s ease both;
+}
+.btn-hero:hover{transform:translateY(-3px);box-shadow:0 14px 44px rgba(201,150,58,.45);}
+.btn-hero-arrow{transition:transform .2s;}
+.btn-hero:hover .btn-hero-arrow{transform:translateX(4px);}
+.btn-sub{
+  display:block;
+  margin-top:12px;
+  font-size:12px;color:rgba(255,255,255,.4);
+  animation:fadeUp .8s .65s ease both;
+}
+.btn-sub span{color:rgba(255,255,255,.7);}
+
+/* HERO MOCKUP */
+.hero-visual{
+  position:relative;
+  animation:fadeUp .8s .4s ease both;
+}
+.ebook-mockup{
+  background:linear-gradient(155deg,#7C2D3E,#4A1020);
+  border-radius:20px;
+  padding:36px 30px;
+  text-align:center;
+  position:relative;overflow:hidden;
+  box-shadow:
+    0 40px 80px rgba(0,0,0,.5),
+    0 0 0 1px rgba(255,255,255,.06),
+    inset 0 1px 0 rgba(255,255,255,.1);
+  transform:perspective(1000px) rotateY(-8deg) rotateX(2deg);
+  transition:transform .3s ease;
+}
+.ebook-mockup:hover{transform:perspective(1000px) rotateY(-4deg) rotateX(1deg);}
+.ebook-mockup::before{
+  content:'';position:absolute;
+  top:0;left:0;right:0;height:1px;
+  background:linear-gradient(90deg,transparent,rgba(201,150,58,.5),transparent);
+}
+.em-badge{
+  display:inline-block;
+  border:1px solid rgba(201,150,58,.4);
+  color:var(--gold-lt);
+  font-size:10px;letter-spacing:2.5px;text-transform:uppercase;
+  padding:4px 14px;border-radius:20px;
+  margin-bottom:20px;font-weight:500;
+}
+.em-icon{font-size:4.5rem;display:block;margin-bottom:14px;}
+.em-title{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.8rem;font-weight:700;
+  color:#fff;line-height:1.2;margin-bottom:6px;
+}
+.em-title em{color:var(--rose-light);font-style:italic;}
+.em-sub{color:rgba(255,255,255,.4);font-size:12px;margin-bottom:24px;}
+.em-divider{
+  width:48px;height:1.5px;
+  background:linear-gradient(90deg,transparent,var(--gold),transparent);
+  margin:0 auto 20px;
+}
+.em-stats{display:flex;justify-content:space-around;}
+.em-stat .es-n{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.5rem;font-weight:700;color:var(--gold-lt);
+}
+.em-stat .es-l{font-size:10px;color:rgba(255,255,255,.35);text-transform:uppercase;letter-spacing:1px;margin-top:2px;}
+
+/* floating badges */
+.float-badge{
+  position:absolute;
+  background:#fff;
+  border-radius:12px;
+  padding:10px 14px;
+  box-shadow:0 8px 24px rgba(0,0,0,.25);
+  font-size:12px;font-weight:600;color:var(--text);
+  display:flex;align-items:center;gap:7px;
+  animation:float 3s ease-in-out infinite;
+  white-space:nowrap;
+}
+.float-badge.fb-1{bottom:-20px;left:-30px;animation-delay:0s;}
+.float-badge.fb-2{top:-15px;right:-20px;animation-delay:1.5s;}
+.fb-dot{width:8px;height:8px;border-radius:50%;}
+@keyframes float{0%,100%{transform:translateY(0);}50%{transform:translateY(-8px);}}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(28px);}to{opacity:1;transform:translateY(0);}}
+
+/* ══════════════════════════════════════
+   DOR / IDENTIFICAÇÃO
+══════════════════════════════════════ */
+.pain{
+  background:#fff;
+  padding:96px 0;
+  position:relative;
+}
+.pain::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:4px;
+  background:linear-gradient(90deg,transparent,var(--rose-mid),transparent);
+}
+.section-label{
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--rose-pale);
+  border:1px solid var(--border);
+  color:var(--rose-mid);
+  font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;
+  padding:5px 16px;border-radius:30px;
+  margin-bottom:22px;
+}
+.section-title{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(2rem,4vw,3rem);
+  font-weight:700;
+  color:var(--text);
+  line-height:1.15;
+  margin-bottom:16px;
+}
+.section-title em{color:var(--rose);font-style:italic;}
+.section-sub{
+  font-size:16px;color:var(--muted);
+  line-height:1.75;max-width:560px;
+}
+
+.pain-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
+  gap:20px;
+  margin-top:52px;
+}
+.pain-card{
+  border:1.5px solid var(--border);
+  border-radius:16px;
+  padding:24px 22px;
+  background:var(--cream);
+  display:flex;gap:14px;align-items:flex-start;
+  transition:border-color .2s,transform .2s;
+}
+.pain-card:hover{border-color:var(--rose-mid);transform:translateY(-3px);}
+.pain-icon{
+  font-size:1.5rem;
+  width:44px;height:44px;
+  border-radius:12px;
+  background:var(--rose-pale);
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;
+}
+.pain-card h4{font-size:15px;font-weight:600;color:var(--text);margin-bottom:5px;}
+.pain-card p{font-size:13.5px;color:var(--muted);line-height:1.6;}
+
+/* ══════════════════════════════════════
+   TRANSFORMAÇÃO
+══════════════════════════════════════ */
+.transform{
+  background:var(--rose);
+  padding:96px 0;
+  position:relative;overflow:hidden;
+}
+.transform::before{
+  content:'ANTES              DEPOIS';
+  position:absolute;
+  font-family:'Cormorant Garamond',serif;
+  font-size:180px;font-weight:700;font-style:italic;
+  color:rgba(255,255,255,.03);
+  white-space:nowrap;
+  top:50%;left:50%;
+  transform:translate(-50%,-50%);
+  letter-spacing:40px;
+  pointer-events:none;
+}
+.transform-inner{
+  display:grid;
+  grid-template-columns:1fr auto 1fr;
+  gap:32px;align-items:center;
+}
+.transform-col{background:rgba(255,255,255,.06);border-radius:20px;padding:32px 28px;border:1px solid rgba(255,255,255,.1);}
+.transform-col.after{background:rgba(255,255,255,.12);border-color:rgba(201,150,58,.3);}
+.tc-label{
+  font-size:11px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;
+  margin-bottom:20px;padding-bottom:14px;border-bottom:1px solid rgba(255,255,255,.12);
+}
+.transform-col .tc-label{color:rgba(255,255,255,.4);}
+.transform-col.after .tc-label{color:var(--gold-lt);}
+.tc-item{
+  display:flex;align-items:flex-start;gap:10px;
+  margin-bottom:14px;font-size:14.5px;color:rgba(255,255,255,.75);line-height:1.5;
+}
+.transform-col.after .tc-item{color:#fff;}
+.tc-dot{width:18px;height:18px;border-radius:50%;flex-shrink:0;margin-top:2px;display:flex;align-items:center;justify-content:center;font-size:10px;}
+.transform-col .tc-dot{background:rgba(255,255,255,.1);}
+.transform-col.after .tc-dot{background:rgba(201,150,58,.3);color:var(--gold-lt);}
+.transform-arrow{
+  font-size:2.5rem;color:var(--gold-lt);
+  filter:drop-shadow(0 0 20px rgba(201,150,58,.4));
+}
+
+/* ══════════════════════════════════════
+   CONTEÚDO DO EBOOK
+══════════════════════════════════════ */
+.contents{padding:96px 0;background:var(--cream);}
+.contents-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(300px,1fr));
+  gap:18px;
+  margin-top:52px;
+}
+.chapter-card{
+  background:#fff;
+  border:1.5px solid var(--border);
+  border-radius:18px;
+  padding:26px 24px;
+  position:relative;overflow:hidden;
+  transition:all .25s;
+}
+.chapter-card::before{
+  content:'';position:absolute;
+  top:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,var(--rose),var(--rose-mid));
+  opacity:0;transition:opacity .25s;
+}
+.chapter-card:hover{transform:translateY(-4px);border-color:var(--rose-light);}
+.chapter-card:hover::before{opacity:1;}
+.cc-num{
+  font-family:'Cormorant Garamond',serif;
+  font-size:3rem;font-weight:700;
+  color:var(--border);
+  line-height:1;
+  margin-bottom:8px;
+}
+.cc-icon{font-size:1.6rem;margin-bottom:10px;display:block;}
+.cc-title{font-size:16px;font-weight:600;color:var(--text);margin-bottom:8px;}
+.cc-list{list-style:none;margin:0;}
+.cc-list li{
+  font-size:13px;color:var(--muted);
+  padding:3px 0;
+  display:flex;align-items:center;gap:7px;
+}
+.cc-list li::before{content:'✦';color:var(--rose-light);font-size:9px;flex-shrink:0;}
+
+/* ══════════════════════════════════════
+   AUTORIDADE
+══════════════════════════════════════ */
+.authority{
+  background:#fff;
+  padding:96px 0;
+  border-top:1px solid var(--border);
+}
+.authority-inner{
+  display:grid;
+  grid-template-columns:360px 1fr;
+  gap:64px;align-items:center;
+}
+.auth-photo{
+  background:linear-gradient(155deg,var(--rose),#5A1828);
+  border-radius:24px;
+  aspect-ratio:1;
+  display:flex;flex-direction:column;
+  align-items:center;justify-content:center;
+  position:relative;overflow:hidden;
+  box-shadow:0 24px 60px rgba(124,45,62,.25);
+}
+.auth-photo-icon{font-size:6rem;margin-bottom:12px;}
+.auth-photo-name{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.5rem;font-weight:600;
+  color:#fff;margin-bottom:4px;
+}
+.auth-photo-role{font-size:12px;color:rgba(255,255,255,.5);letter-spacing:1px;text-transform:uppercase;}
+.auth-photo-badge{
+  position:absolute;bottom:20px;right:20px;
+  background:var(--gold);
+  color:var(--dark);font-size:11px;font-weight:700;
+  padding:5px 12px;border-radius:20px;
+}
+.auth-stats{
+  display:flex;gap:20px;flex-wrap:wrap;
+  margin:28px 0;
+}
+.auth-stat{
+  background:var(--rose-pale);
+  border:1px solid var(--border);
+  border-radius:14px;
+  padding:16px 20px;
+  text-align:center;flex:1;min-width:100px;
+}
+.as-n{
+  font-family:'Cormorant Garamond',serif;
+  font-size:2rem;font-weight:700;color:var(--rose);
+}
+.as-l{font-size:11.5px;color:var(--muted);margin-top:2px;}
+.auth-list{list-style:none;}
+.auth-list li{
+  display:flex;align-items:flex-start;gap:10px;
+  font-size:14.5px;color:var(--muted);
+  padding:8px 0;border-bottom:1px solid var(--border);
+  line-height:1.5;
+}
+.auth-list li:last-child{border-bottom:none;}
+.auth-list li::before{content:'✓';color:var(--gold);font-weight:700;margin-top:2px;}
+
+/* ══════════════════════════════════════
+   PROVA SOCIAL
+══════════════════════════════════════ */
+.proof{padding:96px 0;background:var(--rose-pale);}
+.stars{color:var(--gold);font-size:1rem;letter-spacing:2px;margin-bottom:4px;}
+.proof-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(300px,1fr));
+  gap:20px;
+  margin-top:52px;
+}
+.testimonial{
+  background:#fff;
+  border:1.5px solid var(--border);
+  border-radius:18px;
+  padding:28px 24px;
+  position:relative;
+  transition:all .25s;
+}
+.testimonial:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(124,45,62,.1);}
+.testimonial::before{
+  content:'"';
+  font-family:'Cormorant Garamond',serif;
+  font-size:5rem;font-style:italic;font-weight:700;
+  color:var(--rose-light);
+  position:absolute;top:-8px;left:20px;
+  line-height:1;pointer-events:none;
+}
+.test-text{
+  font-size:14.5px;color:var(--text);
+  line-height:1.75;margin-bottom:20px;
+  font-style:italic;
+}
+.test-person{display:flex;align-items:center;gap:12px;}
+.test-avatar{
+  width:44px;height:44px;border-radius:50%;
+  background:linear-gradient(135deg,var(--rose),var(--rose-mid));
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.1rem;color:#fff;font-weight:600;
+  font-family:'Cormorant Garamond',serif;
+  flex-shrink:0;
+}
+.test-name{font-size:14px;font-weight:600;color:var(--text);}
+.test-city{font-size:12px;color:var(--muted);}
+.test-badge{
+  margin-left:auto;
+  background:var(--rose-pale);
+  border:1px solid var(--border);
+  color:var(--rose-mid);
+  font-size:11px;font-weight:600;
+  padding:3px 10px;border-radius:20px;
+}
+
+/* número social grande */
+.social-numbers{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
+  gap:20px;
+  margin-bottom:64px;
+}
+.sn-card{
+  background:#fff;
+  border:1.5px solid var(--border);
+  border-radius:18px;
+  padding:28px 24px;
+  text-align:center;
+}
+.sn-num{
+  font-family:'Cormorant Garamond',serif;
+  font-size:3.2rem;font-weight:700;color:var(--rose);
+  display:block;margin-bottom:6px;
+}
+.sn-lbl{font-size:13.5px;color:var(--muted);}
+
+/* ══════════════════════════════════════
+   BÔNUS
+══════════════════════════════════════ */
+.bonus{
+  background:linear-gradient(155deg,var(--dark) 0%,#2A0810 100%);
+  padding:96px 0;position:relative;overflow:hidden;
+}
+.bonus::before{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse at 80% 50%,rgba(201,150,58,.08) 0%,transparent 55%);
+}
+.bonus-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
+  gap:20px;
+  margin-top:52px;
+}
+.bonus-card{
+  background:rgba(255,255,255,.04);
+  border:1px solid rgba(255,255,255,.1);
+  border-radius:18px;
+  padding:28px 24px;
+  position:relative;
+  transition:all .25s;
+}
+.bonus-card:hover{border-color:rgba(201,150,58,.4);background:rgba(255,255,255,.07);}
+.bc-tag{
+  display:inline-block;
+  background:rgba(201,150,58,.15);
+  color:var(--gold-lt);
+  font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;
+  padding:3px 12px;border-radius:20px;
+  margin-bottom:14px;
+}
+.bc-icon{font-size:2rem;display:block;margin-bottom:12px;}
+.bc-title{font-size:16px;font-weight:600;color:#fff;margin-bottom:8px;}
+.bc-desc{font-size:13.5px;color:rgba(255,255,255,.5);line-height:1.65;}
+.bc-value{
+  margin-top:18px;padding-top:16px;
+  border-top:1px solid rgba(255,255,255,.08);
+  font-size:13px;color:rgba(255,255,255,.35);
+}
+.bc-value span{color:var(--gold-lt);font-weight:600;}
+
+/* ══════════════════════════════════════
+   OFERTA / PREÇO
+══════════════════════════════════════ */
+.offer{padding:96px 0;background:var(--cream);}
+.offer-box{
+  background:#fff;
+  border:2px solid var(--border);
+  border-radius:28px;
+  overflow:hidden;
+  max-width:680px;
+  margin:52px auto 0;
+  box-shadow:0 24px 80px rgba(124,45,62,.12);
+}
+.offer-header{
+  background:linear-gradient(135deg,var(--rose),#5A1828);
+  padding:32px 40px;text-align:center;
+  position:relative;overflow:hidden;
+}
+.offer-header::after{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse at 50% 0%,rgba(201,150,58,.2) 0%,transparent 60%);
+}
+.offer-header h3{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.5rem;font-weight:700;
+  color:#fff;position:relative;z-index:1;
+  margin-bottom:6px;
+}
+.offer-header p{font-size:13px;color:rgba(255,255,255,.55);position:relative;z-index:1;}
+.offer-body{padding:40px;}
+.price-row{
+  display:flex;align-items:center;gap:20px;
+  margin-bottom:32px;flex-wrap:wrap;
+}
+.price-old{
+  font-size:1.3rem;color:var(--muted);
+  text-decoration:line-through;
+}
+.price-arrow{color:var(--muted);font-size:1.2rem;}
+.price-new{
+  font-family:'Cormorant Garamond',serif;
+  font-size:3.5rem;font-weight:700;color:var(--rose);
+  line-height:1;
+}
+.price-new sub{font-size:1.4rem;vertical-align:top;margin-top:10px;}
+.price-new sup{font-size:1.2rem;}
+.price-label{
+  background:var(--rose-pale);
+  border:1px solid var(--border);
+  color:var(--rose);font-size:12px;font-weight:600;
+  padding:4px 12px;border-radius:20px;
+  margin-left:4px;
+}
+.offer-includes{list-style:none;margin-bottom:32px;}
+.offer-includes li{
+  display:flex;align-items:center;gap:12px;
+  font-size:14.5px;color:var(--text);
+  padding:10px 0;border-bottom:1px solid var(--border);
+}
+.offer-includes li:last-child{border-bottom:none;}
+.oi-check{
+  width:22px;height:22px;border-radius:50%;
+  background:linear-gradient(135deg,var(--rose),var(--rose-mid));
+  color:#fff;font-size:11px;
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;
+}
+.btn-offer{
+  display:block;
+  background:linear-gradient(135deg,var(--gold),#A87520);
+  color:var(--dark);
+  text-align:center;
+  padding:20px;border-radius:14px;
+  text-decoration:none;
+  font-size:17px;font-weight:700;
+  letter-spacing:.3px;
+  transition:all .25s;
+  box-shadow:0 8px 28px rgba(201,150,58,.3);
+}
+.btn-offer:hover{transform:translateY(-2px);box-shadow:0 14px 40px rgba(201,150,58,.4);}
+.offer-guarantee{
+  display:flex;align-items:center;gap:14px;
+  background:var(--cream);
+  border-radius:12px;
+  padding:16px 20px;
+  margin-top:20px;
+}
+.og-icon{font-size:2rem;}
+.og-title{font-size:14px;font-weight:600;color:var(--text);margin-bottom:2px;}
+.og-text{font-size:12.5px;color:var(--muted);line-height:1.5;}
+.offer-secure{
+  display:flex;justify-content:center;gap:20px;flex-wrap:wrap;
+  margin-top:20px;
+}
+.sec-item{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--muted);}
+
+/* escassez */
+.scarcity-bar{
+  background:linear-gradient(135deg,#FFF3DC,#FEE9B0);
+  border:1.5px solid var(--gold-lt);
+  border-radius:12px;
+  padding:14px 20px;
+  display:flex;align-items:center;gap:14px;
+  margin-bottom:28px;
+}
+.sb-pulse{
+  width:12px;height:12px;border-radius:50%;
+  background:var(--gold);
+  flex-shrink:0;
+  box-shadow:0 0 0 0 rgba(201,150,58,.5);
+  animation:pulse 2s infinite;
+}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(201,150,58,.5);}70%{box-shadow:0 0 0 8px rgba(201,150,58,0);}100%{box-shadow:0 0 0 0 rgba(201,150,58,0);}}
+.sb-text{font-size:13.5px;color:#6B4A00;line-height:1.5;}
+.sb-text strong{color:#4A3200;}
+
+/* ══════════════════════════════════════
+   FAQ
+══════════════════════════════════════ */
+.faq{background:#fff;padding:96px 0;}
+.faq-list{max-width:680px;margin:52px auto 0;}
+.faq-item{
+  border:1.5px solid var(--border);
+  border-radius:14px;
+  margin-bottom:12px;
+  overflow:hidden;
+  transition:border-color .2s;
+}
+.faq-item.open{border-color:var(--rose-mid);}
+.faq-q{
+  padding:18px 22px;
+  font-size:15px;font-weight:600;color:var(--text);
+  cursor:pointer;
+  display:flex;justify-content:space-between;align-items:center;
+  gap:14px;user-select:none;
+}
+.faq-q:hover{color:var(--rose);}
+.faq-arrow{
+  color:var(--rose-mid);font-size:1rem;
+  transition:transform .25s;flex-shrink:0;
+}
+.faq-item.open .faq-arrow{transform:rotate(180deg);}
+.faq-a{
+  max-height:0;overflow:hidden;
+  transition:max-height .35s ease,padding .25s;
+}
+.faq-item.open .faq-a{max-height:400px;}
+.faq-a-inner{
+  padding:0 22px 20px;
+  font-size:14.5px;color:var(--muted);line-height:1.75;
+}
+
+/* ══════════════════════════════════════
+   FINAL CTA
+══════════════════════════════════════ */
+.final-cta{
+  background:linear-gradient(155deg,var(--dark),#3A0E18);
+  padding:100px 0;text-align:center;
+  position:relative;overflow:hidden;
+}
+.final-cta::before{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse at 50% 0%,rgba(124,45,62,.5) 0%,transparent 60%);
+}
+.final-cta-inner{position:relative;z-index:1;}
+.final-cta h2{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(2rem,5vw,3.8rem);
+  font-weight:700;color:#fff;
+  line-height:1.15;margin-bottom:18px;
+}
+.final-cta h2 em{color:var(--rose-light);font-style:italic;}
+.final-cta p{
+  font-size:16.5px;color:rgba(255,255,255,.55);
+  max-width:500px;margin:0 auto 48px;
+  line-height:1.75;font-weight:300;
+}
+.btn-final{
+  display:inline-flex;align-items:center;gap:12px;
+  background:linear-gradient(135deg,var(--gold),#A87520);
+  color:var(--dark);
+  padding:20px 48px;border-radius:16px;
+  text-decoration:none;
+  font-size:17px;font-weight:700;letter-spacing:.3px;
+  box-shadow:0 12px 40px rgba(201,150,58,.35);
+  transition:all .25s;
+}
+.btn-final:hover{transform:translateY(-3px);box-shadow:0 20px 56px rgba(201,150,58,.45);}
+.final-micro{
+  margin-top:18px;
+  font-size:13px;color:rgba(255,255,255,.3);
+}
+
+/* ══════════════════════════════════════
+   FOOTER
+══════════════════════════════════════ */
+footer{
+  background:var(--dark);
+  border-top:1px solid rgba(255,255,255,.05);
+  padding:32px 24px;
+  text-align:center;
+}
+footer p{font-size:12.5px;color:rgba(255,255,255,.25);line-height:1.8;}
+
+/* ══════════════════════════════════════
+   SCROLL REVEAL
+══════════════════════════════════════ */
+.reveal{opacity:0;transform:translateY(36px);transition:opacity .7s ease,transform .7s ease;}
+.reveal.visible{opacity:1;transform:translateY(0);}
+.reveal-delay-1{transition-delay:.1s;}
+.reveal-delay-2{transition-delay:.2s;}
+.reveal-delay-3{transition-delay:.3s;}
+.reveal-delay-4{transition-delay:.4s;}
+
+/* ══ RESPONSIVE ══ */
+@media(max-width:780px){
+  .hero-inner{grid-template-columns:1fr;}
+  .hero-visual{display:none;}
+  .authority-inner{grid-template-columns:1fr;}
+  .auth-photo{max-width:280px;margin:0 auto;}
+  .transform-inner{grid-template-columns:1fr;text-align:center;}
+  .transform-arrow{transform:rotate(90deg);}
+  .offer-body{padding:28px 22px;}
+  .price-row{flex-direction:column;align-items:flex-start;gap:10px;}
+  .nav-cta{display:block;}
+}
+</style>
+</head>
+<body>
+
+<!-- ══ BARRA DE URGÊNCIA ══ -->
+<div class="urgency-bar">
+  🔥 Oferta por tempo limitado — <strong>50% OFF hoje</strong> · Encerra em
+  <span id="countdown">23:47:12</span>
+</div>
+
+<!-- ══ NAVBAR ══ -->
+<nav>
+  <div class="nav-logo">🎂 Arte de Fazer Bolos</div>
+  <a href="https://pay.cakto.com.br/bkpfu5d_860171" class="nav-cta">Quero o Ebook →</a>
+</nav>
+
+<!-- ══════════════════════════════════
+     HERO
+══════════════════════════════════════ -->
+<section class="hero">
+  <div class="hero-mesh"></div>
+  <div class="hero-grain"></div>
+  <div class="hero-orb hero-orb-1"></div>
+  <div class="hero-orb hero-orb-2"></div>
+  <div class="container">
+    <div class="hero-inner">
+      <div class="hero-content">
+        <div class="hero-eyebrow">🎂 Ebook Completo de Confeitaria</div>
+        <h1>Aprenda a fazer bolos que<br><em>encantam</em> e <span>geram renda</span></h1>
+        <p class="hero-sub">
+          Do pão de ló ao naked cake, do ganache ao buttercream — mais de 40 receitas completas, técnicas profissionais e tudo que você precisa para transformar sua cozinha em negócio.
+        </p>
+        <div class="hero-proof">
+          <div class="hp-item">
+            <span class="hp-icon">👩‍🍳</span>
+            <div class="hp-text"><strong>+4.800</strong> confeiteiras</div>
+          </div>
+          <div class="hp-item">
+            <span class="hp-icon">⭐</span>
+            <div class="hp-text"><strong>4.9 / 5</strong> de avaliação</div>
+          </div>
+          <div class="hp-item">
+            <span class="hp-icon">📖</span>
+            <div class="hp-text"><strong>+200 páginas</strong> de conteúdo</div>
+          </div>
+        </div>
+        <a href="https://pay.cakto.com.br/bkpfu5d_860171" class="btn-hero">
+          Quero meu Ebook agora <span class="btn-hero-arrow">→</span>
+        </a>
+        <span class="btn-sub">🔒 Acesso imediato · <span>Pagamento 100% seguro</span> · 7 dias de garantia</span>
+      </div>
+
+      <!-- MOCKUP -->
+      <div class="hero-visual">
+        <div class="ebook-mockup">
+          <div class="em-badge">✦ Ebook Exclusivo</div>
+          <span class="em-icon">🎂</span>
+          <div class="em-title">A Arte de<br>Fazer <em>Bolos</em></div>
+          <div class="em-sub">Receitas · Técnicas · Negócios</div>
+          <div class="em-divider"></div>
+          <div class="em-stats">
+            <div class="em-stat"><div class="es-n">40+</div><div class="es-l">Receitas</div></div>
+            <div class="em-stat"><div class="es-n">200+</div><div class="es-l">Páginas</div></div>
+            <div class="em-stat"><div class="es-n">6</div><div class="es-l">Capítulos</div></div>
+          </div>
+        </div>
+        <div class="float-badge fb-1">
+          <div class="fb-dot" style="background:#4CAF50"></div>
+          +4.800 alunas satisfeitas
+        </div>
+        <div class="float-badge fb-2">
+          ⭐⭐⭐⭐⭐ Nota 4.9
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════
+     DOR
+══════════════════════════════════════ -->
+<section class="pain">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-label">😔 Você se identifica?</div>
+      <h2 class="section-title">Você já passou por <em>alguma dessas</em> situações?</h2>
+      <p class="section-sub">Se você respondeu sim para pelo menos uma dessas perguntas, este ebook foi feito exatamente para você.</p>
+    </div>
+    <div class="pain-grid">
+      <div class="pain-card reveal reveal-delay-1">
+        <div class="pain-icon">😰</div>
+        <div><h4>Receitas que não saem como na foto</h4><p>Você segue a receita mas o bolo afunda, fica cru por dentro ou resseca — e não sabe por quê.</p></div>
+      </div>
+      <div class="pain-card reveal reveal-delay-2">
+        <div class="pain-icon">💸</div>
+        <div><h4>Medo de precificar errado</h4><p>Você cobra pouco por não saber calcular o custo real, ou perde clientes por cobrar sem estratégia.</p></div>
+      </div>
+      <div class="pain-card reveal reveal-delay-3">
+        <div class="pain-icon">😕</div>
+        <div><h4>Recheios que não ficam no ponto</h4><p>Brigadeiro que açucara, chantilly que murcha, ganache que não firma — e ninguém explica o porquê.</p></div>
+      </div>
+      <div class="pain-card reveal reveal-delay-1">
+        <div class="pain-icon">📱</div>
+        <div><h4>Vídeos no YouTube que só confundem</h4><p>Cada creator ensina de um jeito diferente, as receitas se contradizem e você não sabe em quem confiar.</p></div>
+      </div>
+      <div class="pain-card reveal reveal-delay-2">
+        <div class="pain-icon">🎂</div>
+        <div><h4>Decoração que não sai como você imagina</h4><p>As técnicas parecem impossíveis e os acabamentos ficam amadores — mesmo depois de muita prática.</p></div>
+      </div>
+      <div class="pain-card reveal reveal-delay-3">
+        <div class="pain-icon">💭</div>
+        <div><h4>Vontade de vender, mas sem saber por onde começar</h4><p>Você ama fazer bolos mas não sabe como transformar isso em uma renda real e consistente.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════
+     TRANSFORMAÇÃO
+══════════════════════════════════════ -->
+<section class="transform">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:52px;" class="reveal">
+      <div class="section-label" style="background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.15);color:rgba(255,255,255,.7);">✨ A transformação</div>
+      <h2 class="section-title" style="color:#fff;">O que muda <em>depois</em> do ebook</h2>
+    </div>
+    <div class="transform-inner reveal">
+      <div class="transform-col">
+        <div class="tc-label">ANTES</div>
+        <div class="tc-item"><div class="tc-dot">✗</div>Receitas inconsistentes e cheias de dúvidas</div>
+        <div class="tc-item"><div class="tc-dot">✗</div>Não sabe o porquê das técnicas</div>
+        <div class="tc-item"><div class="tc-dot">✗</div>Precifica no chute e perde dinheiro</div>
+        <div class="tc-item"><div class="tc-dot">✗</div>Decorações amadoras e sem confiança</div>
+        <div class="tc-item"><div class="tc-dot">✗</div>Ingredientes desperdiçados por erros</div>
+        <div class="tc-item"><div class="tc-dot">✗</div>Sem estratégia de venda ou marketing</div>
+      </div>
+      <div class="transform-arrow">→</div>
+      <div class="transform-col after">
+        <div class="tc-label">DEPOIS</div>
+        <div class="tc-item"><div class="tc-dot">✓</div>Receitas que saem perfeitas toda vez</div>
+        <div class="tc-item"><div class="tc-dot">✓</div>Domínio técnico que gera confiança real</div>
+        <div class="tc-item"><div class="tc-dot">✓</div>Preços justos com margem de lucro saudável</div>
+        <div class="tc-item"><div class="tc-dot">✓</div>Acabamentos profissionais que impressionam</div>
+        <div class="tc-item"><div class="tc-dot">✓</div>Zero desperdício com técnicas certeiras</div>
+        <div class="tc-item"><div class="tc-dot">✓</div>Estratégias reais para vender mais</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════
+     CONTEÚDO
+══════════════════════════════════════ -->
+<section class="contents">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-label">📖 O que está dentro</div>
+      <h2 class="section-title">Tudo que você vai <em>aprender</em></h2>
+      <p class="section-sub">6 capítulos completos, desenvolvidos do zero ao avançado, com linguagem clara e técnica ao mesmo tempo.</p>
+    </div>
+    <div class="contents-grid">
+      <div class="chapter-card reveal reveal-delay-1">
+        <div class="cc-num">01</div>
+        <span class="cc-icon">🧰</span>
+        <div class="cc-title">Fundamentos da Confeitaria</div>
+        <ul class="cc-list">
+          <li>O papel de cada ingrediente</li>
+          <li>Equipamentos essenciais</li>
+          <li>Técnicas base que mudam tudo</li>
+          <li>Tabela de solução de problemas</li>
+        </ul>
+      </div>
+      <div class="chapter-card reveal reveal-delay-2">
+        <div class="cc-num">02</div>
+        <span class="cc-icon">🥚</span>
+        <div class="cc-title">Massas Base Completas</div>
+        <ul class="cc-list">
+          <li>Pão de ló clássico e variações</li>
+          <li>Massa amanteigada e chiffon</li>
+          <li>Génoise, angel food e mais</li>
+          <li>Ponto certo + armazenamento</li>
+        </ul>
+      </div>
+      <div class="chapter-card reveal reveal-delay-3">
+        <div class="cc-num">03</div>
+        <span class="cc-icon">🎂</span>
+        <div class="cc-title">Receitas Completas de Bolos</div>
+        <ul class="cc-list">
+          <li>Clássicos, recheados e especiais</li>
+          <li>Naked cake, red velvet, floresta negra</li>
+          <li>Bolos fit e sem glúten</li>
+          <li>Variações lucrativas para venda</li>
+        </ul>
+      </div>
+      <div class="chapter-card reveal reveal-delay-1">
+        <div class="cc-num">04</div>
+        <span class="cc-icon">🍦</span>
+        <div class="cc-title">Coberturas & Recheios</div>
+        <ul class="cc-list">
+          <li>Ganache, chantilly e buttercream</li>
+          <li>Brigadeiro gourmet (8 sabores)</li>
+          <li>Crème pâtissière e cream cheese</li>
+          <li>Caldas para umedecer e finalizar</li>
+        </ul>
+      </div>
+      <div class="chapter-card reveal reveal-delay-2">
+        <div class="cc-num">05</div>
+        <span class="cc-icon">🎨</span>
+        <div class="cc-title">Decoração & Acabamento</div>
+        <ul class="cc-list">
+          <li>Bicos e técnicas com chantilly</li>
+          <li>Drip cake perfeito</li>
+          <li>Chocolate decorativo temperado</li>
+          <li>Decoração com frutas frescas</li>
+        </ul>
+      </div>
+      <div class="chapter-card reveal reveal-delay-3">
+        <div class="cc-num">06</div>
+        <span class="cc-icon">💼</span>
+        <div class="cc-title">Negócio & Gestão</div>
+        <ul class="cc-list">
+          <li>Fórmula de precificação com lucro</li>
+          <li>Embalagem e entrega profissional</li>
+          <li>Marketing e fotos para redes sociais</li>
+          <li>Cronograma de produção semanal</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════
+     AUTORIDADE
+══════════════════════════════════════ -->
+<section class="authority">
+  <div class="container">
+    <div class="authority-inner">
+      <div class="reveal">
+        <div class="auth-photo">
+          <div class="auth-photo-icon">👩‍🍳</div>
+          <div class="auth-photo-name">Chef Ana Paula</div>
+          <div class="auth-photo-role">Confeiteira & Professora</div>
+          <div class="auth-photo-badge">20 anos</div>
+        </div>
+      </div>
+      <div class="reveal reveal-delay-2">
+        <div class="section-label">👩‍🍳 Quem criou este ebook</div>
+        <h2 class="section-title" style="font-size:clamp(1.8rem,3.5vw,2.5rem)">Feito por quem <em>vive</em> a confeitaria</h2>
+        <p style="font-size:15px;color:var(--muted);line-height:1.8;margin-bottom:24px;">
+          Com 20 anos de experiência em confeitaria artesanal, já ensinei mais de 4.800 alunas a transformar sua paixão por bolos em uma fonte real de renda. Cada receita deste ebook foi testada, ajustada e aprovada por dezenas de turmas — incluindo iniciantes absolutas que hoje têm seu próprio negócio.
+        </p>
+        <div class="auth-stats">
+          <div class="auth-stat"><div class="as-n">4.800+</div><div class="as-l">alunas formadas</div></div>
+          <div class="auth-stat"><div class="as-n">20</div><div class="as-l">anos de experiência</div></div>
+          <div class="auth-stat"><div class="as-n">4.9★</div><div class="as-l">avaliação média</div></div>
+        </div>
+        <ul class="auth-list">
+          <li>Formada em Gastronomia com especialização em Confeitaria Francesa</li>
+          <li>Ex-chef de confeitaria em hotéis 5 estrelas por 8 anos</li>
+          <li>Mais de 200 receitas testadas e documentadas ao longo da carreira</li>
+          <li>Professora online com alunos em todo o Brasil e exterior</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════
+     PROVA SOCIAL
+══════════════════════════════════════ -->
+<section class="proof">
+  <div class="container">
+    <div class="reveal" style="text-align:center;margin-bottom:0;">
+      <div class="section-label" style="display:inline-flex;">⭐ O que dizem as alunas</div>
+      <h2 class="section-title" style="text-align:center;">Mais de 4.800 confeiteiras<br><em>já transformaram</em> suas cozinhas</h2>
+    </div>
+
+    <div class="social-numbers reveal">
+      <div class="sn-card">
+        <span class="sn-num">4.800+</span>
+        <span class="sn-lbl">Ebooks vendidos no Brasil</span>
+      </div>
+      <div class="sn-card">
+        <span class="sn-num">4.9★</span>
+        <span class="sn-lbl">Avaliação média geral</span>
+      </div>
+      <div class="sn-card">
+        <span class="sn-num">97%</span>
+        <span class="sn-lbl">Recomendam para amigas</span>
+      </div>
+      <div class="sn-card">
+        <span class="sn-num">0</span>
+        <span class="sn-lbl">Devoluções nos últimos 30 dias</span>
+      </div>
+    </div>
+
+    <div class="proof-grid">
+      <div class="testimonial reveal reveal-delay-1">
+        <div class="stars">★★★★★</div>
+        <p class="test-text">"Eu tentei aprender confeitaria por anos assistindo vídeos no YouTube. Nada funcionava. Em 2 semanas com esse ebook eu entendi o que estava errando e vendi meu primeiro bolo de encomenda. Chorei de emoção."</p>
+        <div class="test-person">
+          <div class="test-avatar">M</div>
+          <div><div class="test-name">Mariana S.</div><div class="test-city">São Paulo, SP</div></div>
+          <div class="test-badge">✓ Compradora</div>
+        </div>
+      </div>
+      <div class="testimonial reveal reveal-delay-2">
+        <div class="stars">★★★★★</div>
+        <p class="test-text">"A parte de precificação mudou tudo no meu negócio. Eu estava cobrando quase pela metade do que deveria. Em um mês, dobrei minha renda sem fazer mais bolos — só precificando direito."</p>
+        <div class="test-person">
+          <div class="test-avatar">J</div>
+          <div><div class="test-name">Juliana R.</div><div class="test-city">Belo Horizonte, MG</div></div>
+          <div class="test-badge">✓ Compradora</div>
+        </div>
+      </div>
+      <div class="testimonial reveal reveal-delay-3">
+        <div class="stars">★★★★★</div>
+        <p class="test-text">"Nunca tinha feito um naked cake na vida. Segui o passo a passo do ebook e ficou tão lindo que a cliente postou no story dela e me trouxe mais 5 pedidos. Esse ebook se pagou no primeiro bolo!"</p>
+        <div class="test-person">
+          <div class="test-avatar">C</div>
+          <div><div class="test-name">Camila F.</div><div class="test-city">Curitiba, PR</div></div>
+          <div class="test-badge">✓ Compradora</div>
+        </div>
+      </div>
+      <div class="testimonial reveal reveal-delay-1">
+        <div class="stars">★★★★★</div>
+        <p class="test-text">"A tabela de solução de problemas vale o ebook inteiro. Quantas vezes meu bolo afundou e eu não sabia o porquê? Agora sei exatamente o que fazer antes, durante e depois do forno."</p>
+        <div class="test-person">
+          <div class="test-avatar">A</div>
+          <div><div class="test-name">Ana Lúcia M.</div><div class="test-city">Fortaleza, CE</div></div>
+          <div class="test-badge">✓ Compradora</div>
+        </div>
+      </div>
+      <div class="testimonial reveal reveal-delay-2">
+        <div class="stars">★★★★★</div>
+        <p class="test-text">"Sou iniciante absoluta. Nunca tinha feito nada além de bolo de caixinha. Hoje, 3 meses depois do ebook, já tenho 12 clientes fixos e estou pensando em alugar uma cozinha. É real demais."</p>
+        <div class="test-person">
+          <div class="test-avatar">P</div>
+          <div><div class="test-name">Patrícia N.</div><div class="test-city">Recife, PE</div></div>
+          <div class="test-badge">✓ Compradora</div>
+        </div>
+      </div>
+      <div class="testimonial reveal reveal-delay-3">
+        <div class="stars">★★★★☆</div>
+        <p class="test-text">"O conteúdo de decoração superou minhas expectativas. Não acreditava que conseguiria fazer um drip cake bonito, mas com o passo a passo detalhado ficou melhor do que eu imaginava. Já vendi 4!"</p>
+        <div class="test-person">
+          <div class="test-avatar">F</div>
+          <div><div class="test-name">Fernanda L.</div><div class="test-city">Porto Alegre, RS</div></div>
+          <div class="test-badge">✓ Compradora</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════
+     BÔNUS
+══════════════════════════════════════ -->
+<section class="bonus">
+  <div class="container" style="position:relative;z-index:1;">
+    <div class="reveal" style="text-align:center;">
+      <div class="section-label" style="background:rgba(201,150,58,.12);border-color:rgba(201,150,58,.25);color:var(--gold-lt);display:inline-flex;">🎁 Bônus exclusivos</div>
+      <h2 class="section-title" style="color:#fff;">Compre hoje e leve <em>tudo isso</em> de bônus</h2>
+      <p style="font-size:15.5px;color:rgba(255,255,255,.45);max-width:500px;margin:0 auto;line-height:1.7;font-weight:300;">Apenas para quem adquirir durante esta oferta especial.</p>
+    </div>
+    <div class="bonus-grid">
+      <div class="bonus-card reveal reveal-delay-1">
+        <div class="bc-tag">Bônus 1</div>
+        <span class="bc-icon">📊</span>
+        <div class="bc-title">Planilha de Precificação Automática</div>
+        <div class="bc-desc">Digite os ingredientes e quantidades — a planilha calcula automaticamente o custo, margem de lucro e preço de venda ideal para cada receita.</div>
+        <div class="bc-value">Valor: <span>R$47 grátis</span></div>
+      </div>
+      <div class="bonus-card reveal reveal-delay-2">
+        <div class="bc-tag">Bônus 2</div>
+        <span class="bc-icon">📱</span>
+        <div class="bc-title">Guia de Fotos para Redes Sociais</div>
+        <div class="bc-desc">15 dicas práticas para fotografar seus bolos com celular e fazer fotos que vendem — iluminação, ângulos, fundo e edição simples.</div>
+        <div class="bc-value">Valor: <span>R$37 grátis</span></div>
+      </div>
+      <div class="bonus-card reveal reveal-delay-3">
+        <div class="bc-tag">Bônus 3</div>
+        <span class="bc-icon">📅</span>
+        <div class="bc-title">Calendário de Datas & Combos</div>
+        <div class="bc-desc">Calendário anual com as principais datas comemorativas, ideias de combos e kits para cada ocasião, e sugestões de preço e embalagem.</div>
+        <div class="bc-value">Valor: <span>R$27 grátis</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════
+     OFERTA
+══════════════════════════════════════ -->
+<section class="offer" id="oferta">
+  <div class="container">
+    <div class="reveal" style="text-align:center;">
+      <div class="section-label" style="display:inline-flex;">💎 Oferta especial</div>
+      <h2 class="section-title">Garanta o seu <em>agora</em></h2>
+      <p class="section-sub" style="margin:0 auto;text-align:center;">Invista hoje e tenha acesso imediato a tudo — ebook completo + todos os bônus.</p>
+    </div>
+
+    <div class="offer-box reveal">
+      <div class="offer-header">
+        <h3>A Arte de Fazer Bolos — Pacote Completo</h3>
+        <p>Ebook + 3 Bônus Exclusivos + Acesso Vitalício</p>
+      </div>
+      <div class="offer-body">
+
+        <div class="scarcity-bar">
+          <div class="sb-pulse"></div>
+          <div class="sb-text"><strong>⚡ Oferta por tempo limitado:</strong> Esta condição especial encerra em breve. Após o término, o valor retorna ao normal.</div>
+        </div>
+
+        <div class="price-row">
+          <span class="price-old">De R$45,00</span>
+          <span class="price-arrow">→</span>
+          <div>
+            <div class="price-new"><sub>R$</sub>22<sup style="font-size:1rem;color:var(--muted);font-family:Outfit">,50</sup></div>
+            <span class="price-label">50% OFF hoje</span>
+          </div>
+        </div>
+
+        <ul class="offer-includes">
+          <li><div class="oi-check">✓</div> Ebook completo "A Arte de Fazer Bolos" — 200+ páginas</li>
+          <li><div class="oi-check">✓</div> 40+ receitas com passo a passo ultra detalhado</li>
+          <li><div class="oi-check">✓</div> Capítulo completo de fundamentos técnicos</div></li>
+          <li><div class="oi-check">✓</div> <span style="color:var(--gold);font-weight:600;">🎁 Bônus:</span> Planilha de Precificação Automática (R$47)</li>
+          <li><div class="oi-check">✓</div> <span style="color:var(--gold);font-weight:600;">🎁 Bônus:</span> Guia de Fotos para Redes Sociais (R$37)</li>
+          <li><div class="oi-check">✓</div> <span style="color:var(--gold);font-weight:600;">🎁 Bônus:</span> Calendário de Datas & Combos (R$27)</li>
+          <li><div class="oi-check">✓</div> Acesso vitalício — sem mensalidade, para sempre seu</li>
+          <li><div class="oi-check">✓</div> Suporte por e-mail para dúvidas sobre as receitas</li>
+        </ul>
+
+        <a href="https://pay.cakto.com.br/bkpfu5d_860171" class="btn-offer">
+          🎂 Quero o Ebook por R$22,50 — Acesso Imediato
+        </a>
+
+        <div class="offer-guarantee">
+          <div class="og-icon">🛡️</div>
+          <div>
+            <div class="og-title">Garantia incondicional de 7 dias</div>
+            <div class="og-text">Se por qualquer motivo você não ficar satisfeita, devolvemos 100% do seu dinheiro — sem perguntas, sem burocracia.</div>
+          </div>
+        </div>
+
+        <div class="offer-secure">
+          <div class="sec-item">🔒 Pagamento Seguro</div>
+          <div class="sec-item">💳 Cartão, Pix ou Boleto</div>
+          <div class="sec-item">📦 Entrega Imediata</div>
+          <div class="sec-item">♾️ Acesso Vitalício</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════
+     FAQ
+══════════════════════════════════════ -->
+<section class="faq">
+  <div class="container">
+    <div class="reveal" style="text-align:center;">
+      <div class="section-label" style="display:inline-flex;">❓ Dúvidas</div>
+      <h2 class="section-title">Perguntas <em>frequentes</em></h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">Para quem é este ebook? <span class="faq-arrow">▾</span></div>
+        <div class="faq-a"><div class="faq-a-inner">Este ebook foi criado para todos os níveis — desde quem nunca fez um bolo do zero até quem já faz e quer profissionalizar. Há uma sessão de configuração de nível no gerador que adapta a linguagem e profundidade do conteúdo para iniciante, intermediário ou avançado.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">Como recebo o ebook após a compra? <span class="faq-arrow">▾</span></div>
+        <div class="faq-a"><div class="faq-a-inner">O acesso é imediato! Assim que o pagamento for confirmado, você recebe um e-mail com o link de acesso. No caso do Pix, a liberação é em segundos. Para boleto, em até 1 dia útil após a compensação.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">Preciso ter experiência em confeitaria? <span class="faq-arrow">▾</span></div>
+        <div class="faq-a"><div class="faq-a-inner">Não, de forma alguma. O ebook foi cuidadosamente estruturado para que uma iniciante absoluta consiga seguir todas as receitas. Começamos pelos fundamentos — ingredientes, equipamentos, técnicas — antes de ir para as receitas mais elaboradas.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">As receitas usam ingredientes difíceis de encontrar? <span class="faq-arrow">▾</span></div>
+        <div class="faq-a"><div class="faq-a-inner">Não. Todas as receitas foram desenvolvidas com ingredientes encontráveis em qualquer mercado do Brasil. Quando uma receita tem um ingrediente mais específico, sempre indicamos onde encontrar e como substituir.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">Posso parcelar? <span class="faq-arrow">▾</span></div>
+        <div class="faq-a"><div class="faq-a-inner">Sim! Aceitamos cartão de crédito em até 12x, além de Pix com 5% de desconto adicional e boleto bancário. Escolha a forma que for mais conveniente para você.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">Qual é a política de reembolso? <span class="faq-arrow">▾</span></div>
+        <div class="faq-a"><div class="faq-a-inner">Você tem 7 dias a partir da compra para solicitar reembolso total, sem precisar justificar. Basta enviar um e-mail para nosso suporte e o valor é estornado integralmente. Sem questionamentos, sem burocracia.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════
+     FINAL CTA
+══════════════════════════════════════ -->
+<section class="final-cta">
+  <div class="container">
+    <div class="final-cta-inner reveal">
+      <h2>Sua jornada na confeitaria<br>começa <em>hoje</em></h2>
+      <p>Cada bolo que você faz carrega carinho, dedicação e uma história. Está na hora de fazer esses bolos valerem ainda mais.</p>
+      <a href="https://pay.cakto.com.br/bkpfu5d_860171" class="btn-final">
+        🎂 Quero transformar minha confeitaria agora →
+      </a>
+      <p class="final-micro">🛡️ Garantia de 7 dias · 🔒 Pagamento seguro · ♾️ Acesso vitalício</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <p>© 2025 A Arte de Fazer Bolos · Todos os direitos reservados<br>
+  Este produto é digital. As informações aqui são baseadas em experiência profissional e não substituem aulas presenciais.</p>
+</footer>
+
+<script>
+/* ══ COUNTDOWN ══ */
+(function(){
+  const stored = localStorage.getItem('cd_end');
+  let end = stored ? parseInt(stored) : Date.now() + 23*3600000 + 47*60000 + 12000;
+  if(!stored) localStorage.setItem('cd_end', end);
+
+  function fmt(n){return String(n).padStart(2,'0');}
+  function tick(){
+    const diff = Math.max(0, end - Date.now());
+    const h = Math.floor(diff/3600000);
+    const m = Math.floor((diff%3600000)/60000);
+    const s = Math.floor((diff%60000)/1000);
+    document.getElementById('countdown').textContent = `${fmt(h)}:${fmt(m)}:${fmt(s)}`;
+    if(diff>0) requestAnimationFrame(tick);
+    else document.getElementById('countdown').textContent = 'ENCERRADO';
+  }
+  tick();
+})();
+
+/* ══ FAQ ══ */
+function toggleFaq(el){
+  const item = el.parentElement;
+  const isOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));
+  if(!isOpen) item.classList.add('open');
+}
+
+/* ══ SCROLL REVEAL ══ */
+const obs = new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting) e.target.classList.add('visible');
+  });
+},{threshold:0.12});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+
+/* ══ NAV CTA SHOW ══ */
+window.addEventListener('scroll',()=>{
+  const navCta = document.querySelector('.nav-cta');
+  if(window.scrollY > 500) navCta.style.display='block';
+  else navCta.style.display='none';
+});
+</script>
+</body>
+</html>
